@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components>
+  <include path="convention.dicon"/>
+  <include path="aop.dicon"/>
+  <include path="j2ee.dicon"/>
+  <include path="s2jdbc.dicon"/>
+  <include path="s2csv.dicon"/>
+  <include path="chronos-extension.dicon"/>
+  <include path="s2fisshplate.dicon"/>
+
+  <component name="cronTriggeer" class="org.seasar.chronos.core.trigger.CCronTrigger"
+    instance="singleton">
+    <arg>"0 */1 * * * ?"</arg>
+  </component>
+
+  <component name="taskLogger" class="org.seasar.sastruts.example.task.TaskLogger" instance="singleton" />
+
+  <component name="actionMessagesThrowsInterceptor" class="org.seasar.struts.interceptor.ActionMessagesThrowsInterceptor"/>
+  <component name="userDto" class="org.seasar.sastruts.example.dto.UserDto" instance="session" />
+
+</components>

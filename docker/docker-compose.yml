@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  demoimage:
+    image: demoimage:local
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - DB_LANG=ja_JP
+    container_name: "demoimage"
+    ports:
+      - "8080:8080"
