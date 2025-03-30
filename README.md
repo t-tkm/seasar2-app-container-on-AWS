@@ -1,7 +1,7 @@
 # Seasar2 app container on AWS
 * Seasar2アプリのコンテナ化、AWS ECS(Fargate)で動かす
 * サンプルアプリに「Seasar2徹底入門」を利用
-  * https://www.amazon.co.jp/dp/4798121509
+  * https://www.shoeisha.co.jp/book/detail/9784798121505
 * コンテナ、AWS入門者への説明で、本番適用する際には別途設計は必要。例えば、
   * DB接続情報は「jdbc.properties」にハードコードされている。コンテナ起動時に環境変数など外部から取得するようにする。
   * ログはAWS CloudWatch Logs(awslogs)を利用しているが、OS/ミドルなど多種なログが必要、転送先にS3など利用したい場合は、
